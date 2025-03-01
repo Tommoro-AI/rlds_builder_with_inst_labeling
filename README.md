@@ -10,6 +10,7 @@
    필요할 경우 chk_hdf5.py와 chk_tfrecord.py를 활용
 8. custom dataset으로 변경된 hri_dataset 폴더 안에서 tfds build --overwrite
 9. RLDS에 맞게 구성된 tfrecord와 json파일 생성됨(로그에 데이터 위치 나옴)
+10. 학습에 활용
 
 # RLDS Dataset Conversion
 
