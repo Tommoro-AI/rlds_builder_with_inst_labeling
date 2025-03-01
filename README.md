@@ -1,3 +1,16 @@
+# RLDS builder with language instruction
+![image](./readme_img/hri_sub_ex.png)
+1. custom dataset에서 영상 추출(custom_dataset은 episode_*.hdf5 형식의 파일)
+2. Windows에서 Aegisub 설치
+3. Aegisub에서 영상 로드 후 자막 입력(ctrl+3, ctrl+4 활용, 현재 위치를 자막의 시작/끝으로 설정하는 기능. '타이밍'과 '비디오' 메뉴 사이 아래에 있는 버튼들)
+4. Ctrl+S로 자막을 .ass 파일로 저장(뒤에 사용할 .sub 파일은 Aegisub에서 비디오와 함께 저장이 안되기 때문에 사용)
+5. 파일->Export Subtitles->내보내기->microDVD (.sub)로 저장 (frame 단위로 자막을 저장하는 형식, subtitle_*.sub 형식으로 저장)
+6. custom dataset의 episode_*.hdf5 파일과 subtitle_*.sub 파일을 hri_dataset/data/train/에 옮김
+7. 아래 README에 맞춰서 예시의 hri_dataset 폴더를 본인의 custom dataset에 맞게 변경
+   필요할 경우 chk_hdf5.py와 chk_tfrecord.py를 활용
+9. custom dataset으로 변경된 hri_dataset 폴더 안에서 tfds build --overwrite
+10. RLDS에 맞게 구성된 tfrecord와 json파일 생성됨(로그에 데이터 위치 나옴)
+
 # RLDS Dataset Conversion
 
 This repo demonstrates how to convert an existing dataset into RLDS format for X-embodiment experiment integration.
