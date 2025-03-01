@@ -8,8 +8,8 @@
 6. custom dataset의 episode_*.hdf5 파일과 subtitle_*.sub 파일을 hri_dataset/data/train/에 옮김
 7. 아래 README에 맞춰서 예시의 hri_dataset 폴더를 본인의 custom dataset에 맞게 변경
    필요할 경우 chk_hdf5.py와 chk_tfrecord.py를 활용
-9. custom dataset으로 변경된 hri_dataset 폴더 안에서 tfds build --overwrite
-10. RLDS에 맞게 구성된 tfrecord와 json파일 생성됨(로그에 데이터 위치 나옴)
+8. custom dataset으로 변경된 hri_dataset 폴더 안에서 tfds build --overwrite
+9. RLDS에 맞게 구성된 tfrecord와 json파일 생성됨(로그에 데이터 위치 나옴)
 
 # RLDS Dataset Conversion
 
